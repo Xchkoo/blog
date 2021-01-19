@@ -106,3 +106,22 @@ deploy:
   type: git
   repo: http://github.com/Xchkoo/Xchkoo.github.io.git
   branch: main
+
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: ./live2d_models/haruna/33/model.2017.tomo-bukatsu.low.json
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true
+  react:
+    opacity: 0.7
