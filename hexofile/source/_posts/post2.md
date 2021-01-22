@@ -4,9 +4,8 @@ tags:
   - bilibili
   - csgo
 description: 使用例
-categires:
-  - bilibili
-  - csgo
+categories:
+  - [bilibili,csgo]
 date: 2021-01-16 18:20:13
 ---
 

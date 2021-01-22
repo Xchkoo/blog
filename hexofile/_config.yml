@@ -4,8 +4,8 @@
 
 # Site
 title: Xchkoo's blog
-subtitle: 'daily news and algorithm blog'
-description: "Xchkoo's blog"
+subtitle: 'daily blog and algorithm blog'
+description: "Xchkoo"
 keywords: ["Xchkoo's blogs","Xchkoo's algorithm blogs","Xchkoo's home"]
 author: Xchkoo
 language: zh-CN
@@ -98,7 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: clean
+theme: diaspora
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
