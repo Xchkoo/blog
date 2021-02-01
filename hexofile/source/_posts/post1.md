@@ -7,7 +7,7 @@ tags: ['图论','匈牙利算法','最小覆盖点','题解']
 ---
 ## 最小点覆盖
 #### <font color=red size=3>例题</font>: [POJ3041](http://poj.org/problem?id=3041)
-#### <font color=red size=3>理解</font>： 有图G{U,V}，求删去最小点可删去所有边
+#### <font color=red size=3>理解</font>： 有图G{U,V}，求删去最小点可删去所有边的步骤即求最小点覆盖的过程
 
 ------
 
@@ -21,6 +21,7 @@ tags: ['图论','匈牙利算法','最小覆盖点','题解']
 2. X侧未打标记的点和X对侧打标记的点集就是最小点覆盖
 
 <img src= "/img/post/post1/post1-img1.jpg" alt = "最小点覆盖"/>
+
 ------
 
 
