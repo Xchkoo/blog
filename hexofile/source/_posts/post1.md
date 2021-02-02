@@ -4,6 +4,7 @@ description: "匈牙利算法-最小覆盖点"
 categories: 
   - ['图论', '匈牙利算法']
 tags: ['图论','匈牙利算法','最小覆盖点','题解']
+date: 2021-01-16 14:20:13
 ---
 ## 最小点覆盖
 #### <font color=red size=3>例题</font>: [POJ3041](http://poj.org/problem?id=3041)

@@ -32,7 +32,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :year-:month-:day # File name of new posts
+new_post_name: :title_:year-:month-:day # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -116,7 +116,7 @@ live2d:
   tagMode: false
   debug: false
   model:
-    use: ./live2d_models/haruna/33/model.2017.tomo-bukatsu.low.json
+    use: ./live2d_models/haruna/33/model.2018.bls-winter.json
   display:
     position: right
     width: 150
