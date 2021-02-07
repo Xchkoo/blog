@@ -40,35 +40,34 @@ cover:
   - /img/img5.jpg
   - /img/img6.jpg
   - /img/img7.jpg
-  - /img/img8(1).JPG
-  - /img/img8(2).JPG
-  - /img/img8(3).JPG
-  - /img/img8(4).JPG
-  - /img/img8(5).JPG
-  - /img/img8(6).JPG
-  - /img/img8(7).JPG
-  - /img/img8(8).JPG
-  - /img/img8(9).JPG
-  - /img/img8(10).JPG
-  - /img/img8(11).JPG
-  - /img/img8(12).JPG
-  - /img/img8(13).JPG
-  - /img/img8(14).JPG
-  - /img/img8(15).JPG
-  - /img/img8(16).JPG
-  - /img/img8(17).JPG
-  - /img/img8(18).JPG
-  - /img/img8(19).JPG
-  - /img/img8(20).JPG
-  - /img/img8(21).JPG
-  - /img/img8(22).JPG
-  - /img/img8(23).JPG
-  - /img/img8(24).JPG
-  - /img/img8(25).JPG
-  - /img/img8(26).JPG
-  - /img/img8(27).JPG
-  - /img/img8(28).JPG
-  - /img/img8(29).JPG
+  - /img/img8 (1).JPG
+  - /img/img8 (2).JPG
+  - /img/img8 (3).JPG
+  - /img/img8 (4).JPG
+  - /img/img8 (5).JPG
+  - /img/img8 (6).JPG
+  - /img/img8 (7).JPG
+  - /img/img8 (8).JPG
+  - /img/img8 (9).JPG
+  - /img/img8 (10).JPG
+  - /img/img8 (11).JPG
+  - /img/img8 (12).JPG
+  - /img/img8 (13).JPG
+  - /img/img8 (14).JPG
+  - /img/img8 (15).JPG
+  - /img/img8 (16).JPG
+  - /img/img8 (17).JPG
+  - /img/img8 (18).JPG
+  - /img/img8 (19).JPG
+  - /img/img8 (20).JPG
+  - /img/img8 (22).JPG
+  - /img/img8 (23).JPG
+  - /img/img8 (24).JPG
+  - /img/img8 (25).JPG
+  - /img/img8 (26).JPG
+  - /img/img8 (27).JPG
+  - /img/img8 (28).JPG
+  - /img/img8 (29).JPG
 
 # 是否使用mathjax
 mathjax: true
@@ -97,7 +96,8 @@ beian:
     # 是否在主页面最底下显示备案信息(虽然丑，但是完全满足规定要求)
     enableFooter: true
     # 备案号
-    beianInfo: © Copyright 2021 Xchkoo All rights reserved.
+    beianInfo: 
+    - © Copyright 2021 Xchkoo All rights reserved.
     # 链接地址
     link: https://github.com/Xchkoo
 
@@ -123,7 +123,10 @@ gitalk:
     distractionFreeMode: false
 
 # 网站关键字
-keywords: Xchkoo
+keywords: 
+  - Xchkoo
+  - Xchkoo.top
+  - blog
 
 # 要使用google_analytics进行统计的话，这里需要配置ID
 google_analytics: 
