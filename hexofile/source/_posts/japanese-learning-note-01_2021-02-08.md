@@ -6,5 +6,7 @@ tags:
   - "学习笔记"
 categories: ["日语","学习笔记","初级标准日本语"]
 ---
-{% pdf ./note.pdf %}
 
+{% pdf ./note.pdf %}
+{% img ./note(1).jpg %}
+------
