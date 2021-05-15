@@ -15,7 +15,7 @@ timezone: 'Asia/Shanghai'
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: http://xchkoo.github.io
 root: /
-permalink: :title/:year/:month/:day/
+permalink: :title/
 permalink_defaults:
 pretty_urls: 
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
@@ -32,7 +32,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title_:year-:month-:day # File name of new posts
+new_post_name: :title # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -47,7 +47,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   wrap: true
   hljs: false
@@ -127,5 +127,4 @@ live2d:
     opacity: 0.7
 
 addlink:
-  before_text: 
-  after_text: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+  after_text: 本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。

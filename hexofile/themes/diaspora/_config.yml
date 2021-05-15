@@ -82,12 +82,13 @@ local_search:
     enable: true
 
 # 是否显示 一言(hitokoto)
-hitokoto: false
+hitokoto: true
 
 # 链接(可选:facebook,twitter,github,wechat,email)
 links:
     github: https://www.github.com/Xchkoo
     email: mailto:Xchkoo@foxmail.com
+    
   
 # 备案
 beian: 
@@ -97,30 +98,33 @@ beian:
     enableFooter: true
     # 备案号
     beianInfo: 
-    - © Copyright 2021 Xchkoo All rights reserved.
+    - © Copyright 2020 Xchkoo All rights reserved.
     # 链接地址
     link: https://github.com/Xchkoo
 
 # Gitalk 评论插件（https://github.com/gitalk/gitalk）
 gitalk:
     # 是否启用评论功能
-    enable: false
+    enable: true
     # 是否自动展开评论框
-    autoExpand: true
+    autoExpand: false
+    # ID
+    githubID: Xchkoo
     # 应用编号
     clientID: '7a61432ab10a4ea8f35f'
     # 应用秘钥
     clientSecret: 'b2913eac810df502dde1418253f24e86badb4c79'
     # issue仓库名
-    repo: 'BlogComments'
+    repo: 'Xchkoo.github.io'
     # Github名
     owner: 'Xchkoo'
     # Github名
     admin: ['Xchkoo']
     # Ensure uniqueness and length less than 50
-    id: location.href
+    id: location.pathname
+    labels: 'gitalk'
     # Facebook-like distraction free mode
-    distractionFreeMode: false
+    distractionFreeMode: true
 
 # 网站关键字
 keywords: 
@@ -129,7 +133,7 @@ keywords:
   - blog
 
 # 要使用google_analytics进行统计的话，这里需要配置ID
-google_analytics: 
+google_analytics: G-B9GY5PFRRK
 
 # 网站ico
 favicon: /img/X.png
