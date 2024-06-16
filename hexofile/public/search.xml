@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>bilibili［不负责评测第Ⅰ期］500元价位无敌手—寒冰赛睿5</title>
+    <url>/2021-02-01-1/2021/02/01/</url>
+    <content><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=48622792&cid=85186403&page=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<p> <a href="http://xchkoo.github.io/2021-02-01-1/2021/02/01/">http://xchkoo.github.io/2021-02-01-1/2021/02/01/</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+]]></content>
+      <categories>
+        <category>bilibili</category>
+        <category>不负责评测</category>
+      </categories>
+      <tags>
+        <tag>bilibili</tag>
+        <tag>不负责评测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>bilibili-无用各类游戏素材垃圾箱</title>
+    <url>/bilibili-%E6%97%A0%E7%94%A8%E5%90%84%E7%B1%BB%E6%B8%B8%E6%88%8F%E7%B4%A0%E6%9D%90%E5%9E%83%E5%9C%BE%E7%AE%B1/2021/02/18/</url>
+    <content><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=289131496&cid=299134491&page=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+
+<p> <a href="http://xchkoo.github.io/bilibili-%E6%97%A0%E7%94%A8%E5%90%84%E7%B1%BB%E6%B8%B8%E6%88%8F%E7%B4%A0%E6%9D%90%E5%9E%83%E5%9C%BE%E7%AE%B1/2021/02/18/">http://xchkoo.github.io/bilibili-无用各类游戏素材垃圾箱/2021/02/18/</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+]]></content>
+      <categories>
+        <category>bilibili</category>
+        <category>game</category>
+      </categories>
+      <tags>
+        <tag>bilibili</tag>
+        <tag>game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[归并排序]luogu-P1908逆序对 题解</title>
+    <url>/MergeSort/2021/02/04/</url>
+    <content><![CDATA[<h2 id="מּ-מּ-！-color-darkviolet-归并排序"><a href="#מּ-מּ-！-color-darkviolet-归并排序" class="headerlink" title="( מּ,_מּ)！$\color{darkviolet}{归并排序}$"></a>( מּ,_מּ)！$\color{darkviolet}{归并排序}$</h2><h4 id="1-归并排序简介"><a href="#1-归并排序简介" class="headerlink" title="1. 归并排序简介"></a>1. 归并排序简介</h4><blockquote>
+<p>归并排序（Merge Sort）是建立在归并操作上的一种有效，稳定的排序算法，$\color{red}{该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。}$将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。</p><p align="right">————百度百科</p><p></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">复杂度</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">时间复杂度</td>
+<td align="center">$\mathcal{O}(nlogn)$</td>
+</tr>
+<tr>
+<td align="center">空间复杂度</td>
+<td align="center">$\mathcal{T}(n)$</td>
+</tr>
+</tbody></table>
+<img src="/.io//post/MergeSort_2021-02-04/mergesort.webp" alt="原理图解">
+
+<p>归并排序简要概括一下就是————两个步骤：二分 -&gt; 合并(排序的重要步骤)</p>
+<h4 id="2-归并排序原理"><a href="#2-归并排序原理" class="headerlink" title="2. 归并排序原理"></a>2. 归并排序原理</h4><h5 id="1-二分"><a href="#1-二分" class="headerlink" title="1. 二分"></a>1. 二分</h5><p>正如简介所言，归并排序函数<code>void msort(int b,int e)</code>是一个递归函数。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">      <span class="keyword">if</span>(b == e)</span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">  <span class="keyword">int</span> mid=(b+e)/<span class="number">2</span>,i=b,j=mid+<span class="number">1</span>,k=b;</span><br><span class="line">  msort(b,mid),msort(mid+<span class="number">1</span>,e);</span><br><span class="line">  <span class="comment">//理解递归只需知道你设计这个递归函数的功能，中间的递归过程就不用管了。</span></span><br></pre></td></tr></table></figure>
+<p>这一步进行递归二分数组直到不可再分 即b(begin)指针和e(end)指针指向同一位置。</p>
+<ol start="2">
+<li>合并<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(i &lt;= mid&amp;&amp;j &lt;= e)</span><br><span class="line">   	<span class="keyword">if</span>(o[i]&lt;=o[j])</span><br><span class="line">   		tem[k++]=o[i++];</span><br><span class="line">   	<span class="keyword">else</span></span><br><span class="line">   		tem[k++]=o[j++];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+i,j是指向左数组和右数组的开头的指针<br>在合并时我们遵守一个原则：将左边的和右边的元素比较，谁小谁先进数组。<br>逻辑上分为：<center>
+$\color{green}{1. i < j 且 a[i] < a[j]时 我们将i指向的元素保存至临时数组tem中。}$
+$\color{green}{2. i < j 且 a[i] > a[j]时 我们将j指向的元素保存至临时数组tem中。}$
+</center>
+可是这样轮次放置，可能会出现一边的数组先轮完了，这就是第2、3个while，轮完就意味着不需要再比较了，可以直接放入。
+<center>$\color{green}{3. i <= mid 的情况 就直接tem[k++]="o[i++];}$" $\color{green}{ j <="e" tem[k++]="o[j++];}$</center">
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(i&lt;=mid)</span><br><span class="line">	tem[k++]=o[i++];</span><br><span class="line"><span class="keyword">while</span>(j&lt;=e)</span><br><span class="line">	tem[k++]=o[j++];</span><br></pre></td></tr></table></figure>
+别忘了我们的数组是放在临时数组里的，结束时要放回主数组，毕竟接下来还要递归。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> l=b;l&lt;=e;l++)</span><br><span class="line">	o[l]=tem[l];</span><br></pre></td></tr></table></figure>
+
+</=></center></li>
+</ol>
+<h4 id="3-原题-amp-AC代码"><a href="#3-原题-amp-AC代码" class="headerlink" title="3. 原题&amp;AC代码"></a>3. <a href="https://www.luogu.com.cn/problem/P1908">原题</a>&amp;AC代码</h4><p>解题思路:<br>逆序对就是$1，2，3，4，5$这样顺的数组中出了一个二五仔（如 ${1，2，3，5，4}$ 的情况 ${5，4}$ 就算一组逆序对）,那么二五仔的数量就是我们在归并时else的情况的集合。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(i &lt;= mid&amp;&amp;j &lt;= e)</span><br><span class="line">    	<span class="keyword">if</span>(o[i]&lt;=o[j])</span><br><span class="line">    		tem[k++]=o[i++];</span><br><span class="line">    	<span class="keyword">else</span></span><br><span class="line">    		tem[k++]=o[j++],ans+=mid-i+<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>所以，逆序对的数量实际上就是我们将数组归并排序时发生交换的元素数量。<br>只要在归并排序的源码上加上计算ans的步骤就行了。</p>
+<p>$\color{red}{AC代码}$：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * © Copyright 2021 Xchkoo All rights reserved.</span></span><br><span class="line"><span class="comment"> * Author: Xchkoo</span></span><br><span class="line"><span class="comment"> * Date: 2021-02-04 5:40</span></span><br><span class="line"><span class="comment"> * LISENSE: CC v4.0 BY-SA https://creativecommons.org/licenses/by-sa/4.0/deed.zh</span></span><br><span class="line"><span class="comment"> * Remark: Thanks for viewing XD</span></span><br><span class="line"><span class="comment"> * Welcome to my blog -&gt; Xchkoo.top </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 500010</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> o[N];<span class="comment">//Main</span></span><br><span class="line"><span class="keyword">int</span> tem[N];<span class="comment">//Temporary</span></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">msort</span><span class="params">(<span class="keyword">int</span> b,<span class="keyword">int</span> e)</span><span class="comment">// b = begin e = end</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b == e)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> mid=(b+e)/<span class="number">2</span>,i=b,j=mid+<span class="number">1</span>,k=b;</span><br><span class="line">    msort(b,mid),msort(mid+<span class="number">1</span>,e);</span><br><span class="line">    <span class="keyword">while</span>(i &lt;= mid&amp;&amp;j &lt;= e)</span><br><span class="line">    	<span class="keyword">if</span>(o[i]&lt;=o[j])</span><br><span class="line">    		tem[k++]=o[i++];</span><br><span class="line">    	<span class="keyword">else</span></span><br><span class="line">    		tem[k++]=o[j++],ans+=mid-i+<span class="number">1</span>;<span class="comment">//count answer</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;=mid)</span><br><span class="line">    	tem[k++]=o[i++];</span><br><span class="line">    <span class="keyword">while</span>(j&lt;=e)</span><br><span class="line">    	tem[k++]=o[j++];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> l=b;l&lt;=e;l++)</span><br><span class="line">    	o[l]=tem[l];</span><br><span class="line">&#125;           </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; o[i];</span><br><span class="line">    &#125;</span><br><span class="line">    msort(<span class="number">1</span>,n);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p> <a href="http://xchkoo.github.io/MergeSort/2021/02/04/">http://xchkoo.github.io/MergeSort/2021/02/04/</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+]]></content>
+      <categories>
+        <category>排序</category>
+        <category>归并排序</category>
+      </categories>
+      <tags>
+        <tag>排序</tag>
+        <tag>归并排序</tag>
+        <tag>luogu-P1908 逆序对</tag>
+        <tag>题解</tag>
+        <tag>Mergesort</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初日上第九课笔记</title>
+    <url>/japanese-learning-note-01/2021/02/08/</url>
+    <content><![CDATA[
+
+	<div class="row">
+    <embed src="./note.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+<hr>
+<blockquote><p>如果你寒酸的浏览器没有pdf插件</p>
+</blockquote>
+
+<img src="/.io//post/japanese-learning-note-01/note(1).jpg" alt="note(1)">
+<img src="/.io//post/japanese-learning-note-01/note(2).jpg" alt="note(2)">
+<img src="/.io//post/japanese-learning-note-01/note(3).jpg" alt="note(3)">
+<img src="/.io//post/japanese-learning-note-01/note(4).jpg" alt="note(4)">
+<img src="/.io//post/japanese-learning-note-01/note(5).jpg" alt="note(5)">
+
+<hr>
+<p> <a href="http://xchkoo.github.io/japanese-learning-note-01/2021/02/08/">http://xchkoo.github.io/japanese-learning-note-01/2021/02/08/</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+]]></content>
+      <categories>
+        <category>日语</category>
+        <category>学习笔记</category>
+        <category>初级标准日本语</category>
+      </categories>
+      <tags>
+        <tag>日语</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>We have a simple ARG here!</title>
+    <url>/post3/2021/01/16/</url>
+    <content><![CDATA[<h2 id="0876"><a href="#0876" class="headerlink" title="0876***%"></a>0876***%</h2><p> <a href="http://xchkoo.github.io/post3/2021/01/16/">http://xchkoo.github.io/post3/2021/01/16/</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+]]></content>
+      <tags>
+        <tag>ARG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爷 有 片 头 了 ！！！</title>
+    <url>/post2/2021/01/16/</url>
+    <content><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=798539826&cid=279518850&page=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<p> <a href="http://xchkoo.github.io/post2/2021/01/16/">http://xchkoo.github.io/post2/2021/01/16/</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+]]></content>
+      <categories>
+        <category>bilibili</category>
+        <category>csgo</category>
+      </categories>
+      <tags>
+        <tag>bilibili</tag>
+        <tag>csgo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[匈牙利算法-最小覆盖点]POJ3041题解</title>
+    <url>/post1/2021/01/16/</url>
+    <content><![CDATA[<h2 id="最小点覆盖"><a href="#最小点覆盖" class="headerlink" title="最小点覆盖"></a>最小点覆盖</h2><h4 id="例题-POJ3041"><a href="#例题-POJ3041" class="headerlink" title="例题: POJ3041"></a><font color="red" size="3">例题</font>: <a href="http://poj.org/problem?id=3041">POJ3041</a></h4><h4 id="理解：-有图G-U-V-，求删去最小点可删去所有边的步骤即求最小点覆盖的过程"><a href="#理解：-有图G-U-V-，求删去最小点可删去所有边的步骤即求最小点覆盖的过程" class="headerlink" title="理解： 有图G{U,V}，求删去最小点可删去所有边的步骤即求最小点覆盖的过程"></a><font color="red" size="3">理解</font>： 有图G{U,V}，求删去最小点可删去所有边的步骤即求最小点覆盖的过程</h4><hr>
+<h5 id="二分图最大匹配的Konig定理及其证明-过于困难-gt-见-http-www-matrix67-com-blog-archives-116"><a href="#二分图最大匹配的Konig定理及其证明-过于困难-gt-见-http-www-matrix67-com-blog-archives-116" class="headerlink" title="二分图最大匹配的König定理及其证明(过于困难)-&gt;见[http://www.matrix67.com/blog/archives/116]"></a>二分图最大匹配的<font color="red" size="3">König定理</font>及其证明(过于困难)-&gt;见[<a href="http://www.matrix67.com/blog/archives/116]">http://www.matrix67.com/blog/archives/116]</a></h5><hr>
+<h5 id="结论版-Konig定理"><a href="#结论版-Konig定理" class="headerlink" title="结论版 König定理 :"></a>结论版<font color="red" size="5"> König定理</font> :</h5><ol>
+<li>由X侧匹配失败的一点回溯所有边（可见图） 并给走过的点打上标记</li>
+<li>X侧未打标记的点和X对侧打标记的点集就是最小点覆盖</li>
+</ol>
+<img src="/.io//post/post1/post1-img1.jpg" alt="最小点覆盖">
+
+<hr>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码:"></a><strong>代码:</strong></h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">500</span>+<span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Max_Match</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">bool</span> g[maxn][maxn];</span><br><span class="line">    <span class="keyword">bool</span> vis[maxn];</span><br><span class="line">    <span class="keyword">int</span> left[maxn];</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;n=n;</span><br><span class="line">        <span class="built_in">memset</span>(g,<span class="number">0</span>,<span class="keyword">sizeof</span>(g));</span><br><span class="line">        <span class="built_in">memset</span>(left,<span class="number">-1</span>,<span class="keyword">sizeof</span>(left));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">match</span><span class="params">(<span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> v=<span class="number">1</span>;v&lt;=n;v++)<span class="keyword">if</span>(g[u][v] &amp;&amp; !vis[v])</span><br><span class="line">        &#123;</span><br><span class="line">            vis[v]=<span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(left[v]==<span class="number">-1</span> || match(left[v]))</span><br><span class="line">            &#123;</span><br><span class="line">                left[v]=u;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">            <span class="keyword">if</span>(match(i)) ans++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;MM;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,k;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;k);</span><br><span class="line">    MM.init(n);</span><br><span class="line">    <span class="keyword">while</span>(k--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> u,v;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;u,&amp;v);</span><br><span class="line">        MM.g[u][v]=<span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,MM.solve());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a><a href="https://zhuanlan.zhihu.com/p/96229700">参考博客</a></h5><p> <a href="http://xchkoo.github.io/post1/2021/01/16/">http://xchkoo.github.io/post1/2021/01/16/</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+]]></content>
+      <categories>
+        <category>图论</category>
+        <category>匈牙利算法</category>
+      </categories>
+      <tags>
+        <tag>题解</tag>
+        <tag>图论</tag>
+        <tag>匈牙利算法</tag>
+        <tag>最小覆盖点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>很久以前的dt炮搭建笔记</title>
+    <url>/%E5%BE%88%E4%B9%85%E4%BB%A5%E5%89%8D%E7%9A%84dt%E7%82%AE%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/2021/02/26/</url>
+    <content><![CDATA[<p><img src="/.io//2.png" alt="2"><br><img src="/.io//1.png" alt="1"></p>
+<hr>
+<blockquote><p>不是那个dt嗷wwww</p>
+<footer><strong>————Xchkoo</strong></footer></blockquote>
+
+<p> <a href="http://xchkoo.github.io/%E5%BE%88%E4%B9%85%E4%BB%A5%E5%89%8D%E7%9A%84dt%E7%82%AE%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/2021/02/26/">http://xchkoo.github.io/很久以前的dt炮搭建笔记/2021/02/26/</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+]]></content>
+      <categories>
+        <category>俄罗斯方块</category>
+        <category>攻略</category>
+      </categories>
+      <tags>
+        <tag>俄罗斯方块</tag>
+        <tag>攻略</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[米泽穗信][Xchkoo整理][b站偶离汉化]冬季限定夹心巧克力事件</title>
+    <url>/syushiminyuki/2024/06/17/</url>
+    <content><![CDATA[<p>因为自己要看所以整理了一份epub 想着整理都整理了 能帮助到有需要的人也好<br>侵删</p>
+<p><a href="[米泽穗信][Xchkoo整理][b站偶离汉化]冬季限定夹心巧克力事件.epub" download="[米泽穗信][Xchkoo整理][b站偶离汉化]冬季限定夹心巧克力事件.epub">点这里下载:冬季限定夹心巧克力事件.epub</a></p>
+<p> <a href="http://xchkoo.github.io/syushiminyuki/2024/06/17/">http://xchkoo.github.io/syushiminyuki/2024/06/17/</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+]]></content>
+      <tags>
+        <tag>轻小说</tag>
+        <tag>米泽穗信</tag>
+        <tag>epub</tag>
+      </tags>
+  </entry>
+</search>
