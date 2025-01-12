@@ -74,7 +74,7 @@ mathjax: true
 
 
 # 是否关闭默认滚动条
-scrollbar: false
+scrollbar: true
 
 # 本地搜索,请将索引文件放在网站根目录,或修改主题js文件的path值
 local_search:
@@ -98,7 +98,7 @@ beian:
     enableFooter: true
     # 备案号
     beianInfo: 
-    - © Copyright 2020 Xchkoo All rights reserved.
+    - © Copyright 2025 Xchkoo All rights reserved.
     # 链接地址
     link: https://github.com/Xchkoo
 
