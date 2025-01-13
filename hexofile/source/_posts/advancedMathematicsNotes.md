@@ -7,4 +7,4 @@ tags:
 categories: ["数学","学习笔记","高等数学","高等数学上"]
 ---
 
-{% pdf ./notes.pdf %}
+{% pdf ./note.pdf %}
