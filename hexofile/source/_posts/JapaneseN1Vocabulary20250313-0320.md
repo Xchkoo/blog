@@ -7,6 +7,6 @@ tags:
 categories: ["日语","词汇本"]
 ---
 
-{% pdf ./n1单词本2025 3.13-3.20.pdf %}
+{% pdf ./pdf.pdf %}
 
 
